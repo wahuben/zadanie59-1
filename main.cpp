@@ -3,7 +3,7 @@
 #include <vector>
 
 using namespace std;
-int liczba, ilosc;
+int liczba, ile;
 int czynniki = 3;
 
 vector <int> tablica;
@@ -18,8 +18,8 @@ int main() {
 	
 	while(liczba>1){
 		if(liczba%czynniki==0){
-			ilosc++;
-			if(czynniki != tablica[ilosc-1]){
+			ile++;
+			if(czynniki != tablica[ile-1]){
 				tablica.push_back(czynniki);
 			}
 		}
@@ -28,9 +28,9 @@ int main() {
 			liczba /= czynniki;
 		}
 		czynniki = czynniki + 2;
-		if(ilosc > 3)return false;
+		if(ile > 3)return false;
 	}
-	if(ilosc == 3) return true;
-	if(ilosc < 3) return false;
+	if(ile == 3) return true;
+	if(ile < 3) return false;
 	return 0;
 }
